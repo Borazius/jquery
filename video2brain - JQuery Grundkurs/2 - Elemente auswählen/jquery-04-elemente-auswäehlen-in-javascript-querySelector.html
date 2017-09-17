@@ -1,0 +1,106 @@
+<!--Elemente in JavaScript auswählen
+
+In JavaScript gibt es eine Reihe von Methoden, 
+um Elemente auszuwählen: Am bekanntesten ist wahrscheinlich 
+document.getElementById(), aber gerade neuere Ergänzungen 
+wie document.querySelector() sind praktisch. -->
+
+
+
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Elemente auswählen</title>
+
+    <script src="../jquery/jquery-3.2.1.js"></script>
+
+    <style>
+        body {
+            color: #000;
+            font-size: 1rem;
+            background-color: #c0c0c0;
+        }
+
+        nav {
+            background-color: yellowgreen;
+            height: 50px;
+            width: 100%;
+        }
+
+        article,
+        section {
+            height: 100px;
+            width: 100%;
+        }
+
+        #seitenfuss {
+            height: 100px;
+            width: 100%;
+        }
+
+
+
+        li {
+            list-style-type: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <br>
+    <nav>
+        <ul>
+            <li><a href="#">Eins</a></li>
+            <li><a href="#">Zweo</a></li>
+            <li><a href="#">Drie</a></li>
+        </ul>
+    </nav>
+
+    <br>
+    <article class="beitrag">
+        Beitrag 1
+    </article>
+    <br>
+    <section>
+        Lorem ipsumtralalala
+    </section>
+    <br>
+    <article class="beitrag">
+        Beitrag 2
+    </article>
+    <br>
+    <div id="seitenfuss">Footer</div>
+
+
+    <script>
+        // Wir wählen mit JavaScript ein Element mit einer ID
+        // aus und speichern diese n eine Variable
+
+        var element = document.getElementById("seitenfuss");
+        element.style.background = "orange";
+
+        // Wir wählen mit JavaScript mehrere Elemente mit selber
+        // Klassenname und formartieren dieae
+        var beitrag = document.getElementsByClassName("beitrag");
+        for (var i = 0; i < beitrag.length; i++) {
+            beitrag[i].style.background = "yellowgreen";
+        }
+
+        // Eine weitere gute Möglichkeit um Elemente auszuwählen ist mit
+        // querySelector, damit wähle ich die Elemente aus wie ich bei CSS,
+        // z.B.:
+
+    </script>
+
+</body>
+
+</html>
