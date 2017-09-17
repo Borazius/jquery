@@ -1,0 +1,87 @@
+<!-- Eine häufige Aufgabe besteht im Ausblenden oder Einblenden von 
+Elementen. Dafür gibt es show() und hide(), oder auch fadeIn() und fadeOut().
+Des Weiteren haben wir die toggle - Methode die wie einSchalter funktioniert,
+sprich die toggle-Methode überprüft ob das Element sichtbar ist oder unsicht-
+bar. Ist es sichtbar wird es unsichtbar gemacht, ist es unsichtbar wird 
+es sichtbar gemacht! -->
+
+
+<!-- JQuery ermöglicht das Chaining-Verfahren, das aneinanderketten von Befehlen,
+
+Beispiel:
+$("#div").hide().slow("fast").fadeOut(4000);
+
+übersichtlicher:
+$("#div").hide()
+         .slow("fast")
+         .fadeOut(4000); -->
+
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Elemente einn- und ausblenden 1</title>
+
+    <script src="../jquery/jquery-3.2.1.js"></script>
+
+    <style>
+        #box, #box2,#box3 {
+            background-color: orange;
+            width: 100%;
+            height: 80px;
+            padding: 1rem;
+        }
+        #box2{
+            background-color: yellow;
+        }
+        #box3{
+            background-color: rgb(60, 255, 0);
+        }
+    </style>
+
+</head>
+
+<body>
+</br>
+    <button id="btn">klicken für hide und show - Methoden</button><br><br>
+    <div id="box"><h2>Hallo Welt</h2></div>
+<br>
+    <button id="fade">klicken für fade in und fade out - Methoden</button>
+    <br><br>
+    <div id="box2"><h2>Hallo Welt</h2></div>
+    <br>
+    <button id="toggle">klicken für fade in und fade out - Methoden</button>
+    <br><br>
+    <div id="box3"><h2>Hallo Welt</h2></div>
+
+    <script>
+        $("#btn").on("click", function () {
+            // wir verstecken das Element und zeigen es
+            // dann langsam wieder
+            $("#box").hide("slow")
+                     .show("slow");
+
+        });
+
+        $("#fade").on("click", function () {
+            // 4000ms
+            // 6000ms
+            $("#box2").fadeOut(4000)
+                      .fadeIn(6000);
+
+        });
+
+        $("#toggle").on("click", function () {
+            // toogle-Methode ist wie ein Schalter
+            // wenn das Element sichtbar ist wird es unsichtbar gemacht
+            // wenn es unsichtbar ist, wird es sichtbar gemacht!
+            $("#box3").toggle();
+
+        });
+    </script>
+</body>
+
+</html>
