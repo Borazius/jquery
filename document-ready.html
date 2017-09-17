@@ -1,0 +1,31 @@
+<!--$(document).ready bedeutet "wenn das DOM geladen wird" -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document ready - DOM bereit</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    
+    
+</head>
+
+<body>
+    <div id="beispiel">Beispiel</div>
+    <script src="jquery-3.2.1.js"></script>
+    <script>
+        // wann passiert mit wem was?
+        // $(document).ready(function()){
+        // oder kurz: $(function){
+        // $(document).ready(function()){ nur notwendig wenn der JS-Teil im head-Bereich platziert wird
+        // weil für dn Fall wenn es unten platziert ist der DOM bis dort bereits geladen ist.
+        // Aus Performance-Gründen: Script-Teil nicht im head sondern vor dem schliessenden body platzierne!
+        
+        // Damit Elemente überhaupt angesorchen werden können müssen diese zunächst geladen sein
+        $("#beispiel").css("color", "blue");
+        $("#beispiel").css("background-color", "yellow");
+    </script>
+</body>
+</html>
