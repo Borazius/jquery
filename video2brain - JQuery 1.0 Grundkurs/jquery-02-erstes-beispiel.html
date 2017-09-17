@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQuery 1</title>
+
+    <script src="jquery/jquery-3.2.1.js"></script>
+    <script>
+    </script>
+</head>
+
+<body>
+    <label>
+        <input type="text" name="eingabe">
+    </label>
+    <button>ergänzen</button>
+    <ul>
+        <li>eins</li>
+        <li>zwei</li>
+        <li>drei</li>
+    </ul>
+
+
+
+
+    <script>
+        $("button").on("click", function () {
+
+            // testen ob click funktioniert
+            // console.log("geklickt");
+
+            // wir nehmen den Wert der Eingabe und speichern diesen Wert
+            var eingabe = $("input[name=eingabe]").val();
+
+            //  wir testen ob die Eingabe genommen wird
+            console.log(eingabe);
+        });
+    </script>
+</body>
+
+</html>

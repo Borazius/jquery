@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQuery 1</title>
+
+    <script src="jquery/jquery-3.2.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#beispiel").css("color" , "red");
+        });
+
+        // Andere und kürzere Schreibweise
+        $(function(){
+            $("#beispiel").css("background-color" , "yellow");
+        });
+    
+    </script>
+</head>
+
+<body>
+
+   <div id="beispiel">Beispiel</div>
+    <br>
+   Das document-ready benötigen wir nur wenn wir unser js
+   im head-Bereich einfügen. document-ready startet erst mit der
+   js-nachdem das Dokument vollständig geladen wurde.
+<br>
+<br>
+   Platzieren wir den Script, was aus performance Gründen am Besten
+   ist, dann benötigen wir das document.ready nicht mehr,
+   da bis zu vor body-Ende alle Elemente geladen sind
+
+</body>
+
+</html>
