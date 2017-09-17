@@ -3,7 +3,10 @@
 In JavaScript gibt es eine Reihe von Methoden, 
 um Elemente auszuwählen: Am bekanntesten ist wahrscheinlich 
 document.getElementById(), aber gerade neuere Ergänzungen 
-wie document.querySelector() sind praktisch. -->
+wie document.querySelector() sind praktisch. 
+
+Beispiel mit querySelector 
+-->
 
 
 
@@ -90,6 +93,9 @@ wie document.querySelector() sind praktisch. -->
 
         // Wir wählen mit JavaScript mehrere Elemente mit selber
         // Klassenname und formartieren dieae
+        // Wir müssen hier eine Schleife durchlaufen lassen, damit
+        // alle Elemente dieser Klasse "beitrag" die Methode style() durchlaufen können
+        
         var beitrag = document.getElementsByClassName("beitrag");
         for (var i = 0; i < beitrag.length; i++) {
             beitrag[i].style.background = "yellowgreen";
@@ -97,7 +103,10 @@ wie document.querySelector() sind praktisch. -->
 
         // Eine weitere gute Möglichkeit um Elemente auszuwählen ist mit
         // querySelector, damit wähle ich die Elemente aus wie ich bei CSS,
-        // z.B.:
+        // z.B.: hier die Klasse "beitrag also bei querySelector mit Punkt
+        // (-beitrag);"
+
+        let news = document.querySelector('.beitrag');
 
     </script>
 
