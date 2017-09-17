@@ -5,7 +5,16 @@ um Elemente auszuwählen: Am bekanntesten ist wahrscheinlich
 document.getElementById(), aber gerade neuere Ergänzungen 
 wie document.querySelector() sind praktisch. 
 
-Beispiel mit querySelector 
+Beispiel mit querySelector  siehe unten
+
+Auswählen mit JavaScript:
+
+document.getElementbyId("id");
+document.getElementsByClassName("klassenname");
+document.getElementsByTagName("element");
+document.querySelector ("selektorauswahl-wie-bei-css");
+document.querySelectorAll ("selektorauswahl-wie-bei-css"); -> wenn es mehrere der selben 
+Elemente sind
 -->
 
 
@@ -25,7 +34,7 @@ Beispiel mit querySelector
         body {
             color: #000;
             font-size: 1rem;
-            background-color: #c0c0c0;
+            background-color: #d8d8d8;
         }
 
         nav {
@@ -95,7 +104,7 @@ Beispiel mit querySelector
         // Klassenname und formartieren dieae
         // Wir müssen hier eine Schleife durchlaufen lassen, damit
         // alle Elemente dieser Klasse "beitrag" die Methode style() durchlaufen können
-        
+
         var beitrag = document.getElementsByClassName("beitrag");
         for (var i = 0; i < beitrag.length; i++) {
             beitrag[i].style.background = "yellowgreen";
@@ -107,6 +116,7 @@ Beispiel mit querySelector
         // (-beitrag);"
 
         let news = document.querySelector('.beitrag');
+        news.style.background = "yellow";
 
     </script>
 
