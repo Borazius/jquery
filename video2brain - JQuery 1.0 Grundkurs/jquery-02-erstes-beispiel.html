@@ -1,3 +1,15 @@
+<!-- Diese kleine Beispiel zeigt typische Operationen.
+Typische Abfolge ist das wir zunächst eine Element 
+auswählen und anschließend etwas mit diese tun (Methoden),
+z.B. Formatierung ändern.
+
+Mit val()-Methode können wir Inhalte auslesen,
+der append()-Methode ergänzen wir das document mit Elementen 
+und mit addClass fügen wir eine Klasse hinzu -->
+
+
+
+
 <!DOCTYPE html>
 <html lang="de">
 
@@ -8,8 +20,11 @@
     <title>JQuery 1</title>
 
     <script src="jquery/jquery-3.2.1.js"></script>
-    <script>
-    </script>
+   
+    <style>
+        .a {color: red;}
+    </style>
+
 </head>
 
 <body>
@@ -24,8 +39,6 @@
     </ul>
 
 
-
-
     <script>
         $("button").on("click", function () {
 
@@ -36,7 +49,9 @@
             var eingabe = $("input[name=eingabe]").val();
 
             //  wir testen ob die Eingabe genommen wird
-            console.log(eingabe);
+            // console.log(eingabe);
+            $("ul").append("<li>" + eingabe + "</li>")
+                   .addClass("a");
         });
     </script>
 </body>
